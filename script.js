@@ -26,6 +26,6 @@ const changeSlide = (direction) => {
         }
     }
 
-    slideRight.style.transform = `translateY(-${activeSlideIndex * sliderHeight}px)`
-    slideLeft.style.transform = `translateY(${activeSlideIndex * sliderHeight}px)`
+    slideRight.style.transform = `translateY(-${activeSlideIndex * sliderHeight}px)`//If you're on the first slide (activeSlideIndex = 0), the calculation becomes translateY(0px). The slide doesn't move.
+    slideLeft.style.transform = `translateY(${activeSlideIndex * sliderHeight}px)`//If you click the up button, activeSlideIndex becomes 1, and the calculation becomes translateY(-1 * sliderHeight) — meaning the slide moves up by one full height (one slide).
 }
